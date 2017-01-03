@@ -1530,7 +1530,7 @@ GenerateParsingConstructor(io::Printer* printer) {
       WireFormat::WireTypeForFieldType(field->type()));
 
     printer->Print(
-      "case $tag$: {\n",
+      "case (int)$tag$L: {\n",
       "tag", SimpleItoa(tag));
     printer->Indent();
 
